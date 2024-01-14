@@ -29,7 +29,7 @@ export default function Home() {
             </div>
             <button type='submit' className='bg-blue-500 px-10 rounded-lg text-white py-2 w-full'>SignIn</button>
             <div className="flex w-full justify-between">
-              <p className='text-[10px] text-gray-400'>New user? Create account <Link className='text-blue-500' href={'/signup'}>here</Link></p>
+              <p className='text-[10px] text-gray-400'>New user? Create account <Link className='text-blue-500' href={'/signin'}>here</Link></p>
               <Link className='text-[10px] text-gray-400' href={'/reset/password'}>Forgot password?</Link>
             </div>
           </div>
