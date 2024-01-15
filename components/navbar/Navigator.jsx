@@ -19,13 +19,8 @@ function Navigator({ children }) {
     ]
     const [menu, setMenu] = useState(false)
     return (
-<<<<<<< HEAD
-        <div className='flex h-full w-full'>
-            <div className="">
-=======
         <div className='flex'>
             <div className="md:relative absolute top-0 left-0">
->>>>>>> e2ce663 (new1)
                 <AnimatePresence mode='wait'>
                     {menu && <motion.div initial={{ width: 0 }} animate={{ width: '' }} exit={{ width: 0 }} transition={{ duration: .5, ease: "linear" }} className=' flex justify-end h-screen overflow-hidden'>
                         <div className="min-w-[300px] h-full flex flex-col  bg-blue-50 border border-l ">
@@ -53,10 +48,10 @@ function Navigator({ children }) {
                 </AnimatePresence>
             </div>
             <div className="flex flex-col w-full">
-                <div className="flex p-2 bg-[#F2F5F9]  w-full">
+                <div className="flex px-4 py-4 bg-blue-50 w-full">
                     <div onClick={() => setMenu(!menu)} className="p-1 cursor-pointer">
                         {
-                            menu ? <FaX className='text-2xl text-[#009CFF]' /> : <FaBars className='text-2xl text-[#009CFF]' />
+                            menu ? <FaX className='text-2xl text-gray-800' /> : <FaBars className='text-2xl text-gray-800' />
                         }
                     </div>
                 </div>
