@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
-import { FaLock, FaUser, FaUserGraduate } from 'react-icons/fa6'
+import { FaLock, FaUser, FaUserGraduate,FaMail } from 'react-icons/fa6'
+import { IoMdMail } from "react-icons/io";
 
 function Input (props) {
   let [isVisible, setIsVisible] = useState('password')
@@ -19,6 +20,10 @@ function Input (props) {
     case 'graduate':
       iconcomponent = <FaUserGraduate className='text-gray-700 bg-white' />
       break
+      case 'email':
+        iconcomponent = <IoMdMail className='text-gray-700 bg-white' />
+        break
+  
 
     default:
       iconcomponent = null
