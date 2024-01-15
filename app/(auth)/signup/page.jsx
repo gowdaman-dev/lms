@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Input from '@/components/Input'
-import { FaUserGraduate, FaX } from 'react-icons/fa6'
+import { FaSchool, FaUserGraduate, FaX } from 'react-icons/fa6'
 import React, { useEffect, useState } from 'react'
 import Select, { StylesConfig } from 'react-select'
 export default function Home() {
@@ -216,7 +216,7 @@ export default function Home() {
                       styles={StylesConfig}
                       className="w-full"
                     />
-                    <FaUserGraduate className='text-gray-700 bg-white' />
+                    <FaSchool className='text-gray-700 bg-white' />
                   </div>
                 </div>
               )
