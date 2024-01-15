@@ -79,14 +79,14 @@ const table = () => {
   const headings = Object.keys(data[0]);
   return (
     <div className="w-screen h-screen grid place-items-center">
-      <div className='w-1/2 m-auto'>
+      <div className='w-fit m-auto'>
         <TableContainer component={Paper} className='rounded-x'>
           <Table className='w-full' aria-label="simple table">
             <TableHead className='bg-blue-100'>
               <TableRow>
                 {headings.map((heading) => (
                   heading !== 'id' ? (
-                    <TableCell className='p-0' align='center' key={heading}>{heading}</TableCell>
+                    <TableCell className='px-2 py-1' align='center' key={heading}>{heading}</TableCell>
                   ) :
                     null
                 ))}
@@ -100,12 +100,12 @@ const table = () => {
                     heading === 'id' ? (
                       null
                     ) : heading === "Details" ? (
-                      <TableCell key={heading} className='p-0' align="center"><button> {value[heading]} </button></TableCell>
+                      <TableCell key={heading} className='px-2 py-1' align="center"><button> {value[heading]} </button></TableCell>
 
                     ) :
 
                       (
-                        <TableCell key={heading} className='p-0' align="center"><button> {value[heading]}</button></TableCell>
+                        <TableCell key={heading} className='px-2 py-1' align="center"><button> {value[heading]}</button></TableCell>
                       )
                   ))}
                 </TableRow>
