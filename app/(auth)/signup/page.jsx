@@ -71,7 +71,7 @@ export default function Home() {
           method='post'
           className='flex h-full flex-col w-[300px]'
         >
-          <div className='w-full flex flex-col h-full justify-evenly  sm:gap-y-5'>
+          <div className='w-full flex flex-col h-full justify-evenly  sm:gap-y-[5]'>
             <h1 className='text-center text-4xl text-blue-600 font-bold'>
               Sign UP
             </h1>
@@ -116,7 +116,6 @@ export default function Home() {
                 <div className="flex bg-white w-full items-center justify-center shadow-[-1px_-1px_0px_10px_var(--white),1px_1px_0px_10px_var(--midgray)] rounded-lg">
                   <select
                     required
-                    onChange={(e) => { setUserrole(e.target.value) }}
                     name='staff/student'
                     id='userrole'
                     className='w-full px-4 outline-none text-gray-400 bg-transparent font-light'
