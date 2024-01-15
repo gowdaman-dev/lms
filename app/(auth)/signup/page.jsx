@@ -65,9 +65,10 @@ export default function Home() {
     }),
     placeholder: (baseStyles, state) => ({
       ...baseStyles,
-      fontSize: '14px',
+      fontSize: '16px',
       display: 'flex',
-      fontWeight: '300'
+      fontWeight: '300',
+      color:'gray'
     }),
   }
   //standard
