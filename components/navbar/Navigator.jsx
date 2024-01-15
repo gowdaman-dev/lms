@@ -6,17 +6,17 @@ import { AnimatePresence } from 'framer-motion'
 function Navigator({ children }) {
     const [menu, setMenu] = useState(false)
     return (
-        <div className='flex'>
+        <div className='flex h-full w-full'>
             <div className="">
                 <AnimatePresence mode='wait'>
                     {menu && <UserNav />}
                 </AnimatePresence>
             </div>
             <div className="flex flex-col w-full">
-                <div className="flex px-4 py-4 bg-blue-50 w-full">
+                <div className="flex p-2 bg-[#F2F5F9]  w-full">
                     <div onClick={() => setMenu(!menu)} className="p-1 cursor-pointer">
                         {
-                            menu ? <FaX className='text-2xl text-gray-800' /> : <FaBars className='text-2xl text-gray-800' />
+                            menu ? <FaX className='text-2xl text-[#009CFF]' /> : <FaBars className='text-2xl text-[#009CFF]' />
                         }
                     </div>
                 </div>
