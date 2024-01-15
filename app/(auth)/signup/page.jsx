@@ -4,9 +4,12 @@ import Link from 'next/link'
 import Input from '@/components/Input'
 import { FaUserGraduate, FaX } from 'react-icons/fa6'
 import React, { useEffect, useState } from 'react'
-import Select from 'react-select'
+import Select, { StylesConfig } from 'react-select'
 export default function Home() {
-
+  const StylesConfig = {
+    color: "white",
+    borderColor: "pink"
+  }
   //standard
   let [userrole, setUserrole] = useState('')
   let [staffclasses, setStaffclasses] = useState([])
@@ -111,7 +114,7 @@ export default function Home() {
                 defaultValue={''}
                 className='w-full px-4 outline-none text-gray-400 bg-transparent font-light '
               >
-                <option selected value='none'> Student/staff</option>
+                <option value=''> Student/staff</option>
                 <option value='student'> Student</option>
                 <option value='staff'>Staff</option>
               </select>
@@ -143,13 +146,78 @@ export default function Home() {
             {
               (userrole == 'staff') && (
                 <div className="flex flex-col">
-                  <div className="flex bg-white w-full items-center justify-center shadow-[-1px_-1px_0px_10px_var(--white),1px_1px_0px_10px_var(--midgray)] rounded-lg">
+                  <div className=" py-0 flex bg-white w-full items-center justify-center shadow-[-1px_-1px_0px_10px_var(--white),1px_1px_0px_10px_var(--midgray)] rounded-lg">
                     <Select
                       options={standard}
                       value={staffclasses}
                       onChange={addStandard}
                       isMulti={true}
-                      className='w-full outline-none flex-inline border-none'
+                      placeholder={'Standard'}
+                      styles={{
+                        control: (baseStyles, state) => ({
+                          ...baseStyles,
+                          border: 'none',
+                          boxShadow: "none",
+                          outline: 'none',
+                          ":focus": {
+                            border: 'none',
+                            outline: 'none',
+                          },
+                          ":hover": {
+                            border: 'none',
+                          }
+                        }),
+                        container:
+                          (baseStyles, state) => ({
+                            ...baseStyles,
+                            borderColor: 'white',
+                            outline: 'none',
+                            ":focus": {
+                              border: 'none',
+                              outline: 'none',
+                            },
+                            ":hover": {
+                              border: 'none',
+                            }
+                          }),
+                        input:
+                          (baseStyles, state) => ({
+                            ...baseStyles,
+                            borderColor: 'white',
+                            outline: 'none',
+                            ":focus": {
+                              border: 'none',
+                              outline: 'none',
+                            },
+                            ":hover": {
+                              border: 'none',
+                            }
+                          }),
+                        menu: (baseStyles, state) => ({
+                          ...baseStyles,
+                          borderColor: 'white',
+                          outline: 'none',
+                          ":focus": {
+                            border: 'none',
+                            outline: 'none',
+                          },
+                          ":hover": {
+                            border: 'none',
+                          }
+                        }),
+                        valueContainer: (baseStyles, state) => ({
+                          ...baseStyles,
+                          fontSize:'10px',
+                          display:'flex'
+                        }),
+                        placeholder:(baseStyles, state) => ({
+                          ...baseStyles,
+                          fontSize:'14px',
+                          display:'flex',
+                          fontWeight:'300'
+                        }),
+                      }}
+                      className="w-full"
                     />
                     <FaUserGraduate className='text-gray-700 bg-white' />
                   </div>
