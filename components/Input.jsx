@@ -1,11 +1,11 @@
 'use client'
 import React, { useState } from 'react'
-import { FaLock, FaUser, FaUserGraduate,FaMail } from 'react-icons/fa6'
+import { FaLock, FaUser, FaUserGraduate, FaMail } from 'react-icons/fa6'
 import { IoMdMail } from "react-icons/io";
 
-function Input (props) {
-  let [isVisible, setIsVisible] = useState('password')
-  function passVisiblity () {}
+function Input(props) {
+  function passVisiblity() { }
+  
   //icon selection from props
   let iconcomponent = null
   switch (props.icon) {
@@ -20,10 +20,10 @@ function Input (props) {
     case 'graduate':
       iconcomponent = <FaUserGraduate className='text-gray-700 bg-white' />
       break
-      case 'email':
-        iconcomponent = <IoMdMail className='text-gray-700 bg-white' />
-        break
-  
+    case 'email':
+      iconcomponent = <IoMdMail className='text-gray-700 bg-white' />
+      break
+
 
     default:
       iconcomponent = null
@@ -46,24 +46,6 @@ function Input (props) {
           </>
         )}
       </>
-
-      {props.name === 'select' && (
-        <>
-          <select
-            required
-            type={props.type}
-            name={props.name}
-            id=''
-            placeholder={props.placeholder}
-            className='w-full px-4 outline-none text-gray-400 bg-transparent font-light '
-          >
-            <option selected value='Student/Staff'> Student/staff</option>
-            <option value='Student'> Student</option>
-            <option value='Staff'>Staff</option>
-          </select>
-          {iconcomponent}
-        </>
-      )}
     </div>
   )
 }

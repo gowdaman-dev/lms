@@ -1,7 +1,63 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import Input from '@/components/Input'
-export default function Home () {
+import { FaUserGraduate } from 'react-icons/fa6'
+import React, { useState } from 'react'
+export default function Home() {
+
+  //standard
+  let [userrole, setUserrole] = useState('')
+  const standard = [
+    {
+      std: '1st standard',
+      value: 1
+    },
+    {
+      std: '2nd standard',
+      value: 2
+    },
+    {
+      std: '3rd standard',
+      value: 3
+    },
+    {
+      std: '4th standard',
+      value: 4
+    },
+    {
+      std: '5th standard',
+      value: 5
+    },
+    {
+      std: '6th standard',
+      value: 6
+    },
+    {
+      std: '7th standard',
+      value: 7
+    },
+    {
+      std: '8th standard',
+      value: 8
+    },
+    {
+      std: '9th standard',
+      value: 9
+    },
+    {
+      std: '10th standard',
+      value: 10
+    },
+    {
+      std: '1th standard',
+      value: 11
+    },
+    {
+      std: '12th standard',
+      value: 12
+    },
+  ]
   return (
     <div className=' flex h-screen w-screen bg-[var(--authbg)]'>
       <div className='flex sm:hidden w-full h-1/5 items-center justify-center bg-[var(--authgraydient)]'>
@@ -27,10 +83,10 @@ export default function Home () {
               name='username'
             />
             {/* Email component */}
-            <Input type='email' 
-            placeholder='Email'
-             icon='email' 
-             name='email' />
+            <Input type='email'
+              placeholder='Email'
+              icon='email'
+              name='email' />
             {/* password component */}
 
             <Input
@@ -39,17 +95,43 @@ export default function Home () {
               icon='lock'
               name='password'
             />
-            {/* confirmpass component */}
-
-            <Input
-              type='password'
-              placeholder=' confirm password'
-              icon='lock'
-              name='confrim password'
-            />
-
             {/* staff/student component */}
-            <Input type='select' icon='graduate' name='select' />
+            <div className="flex bg-white w-full items-center justify-center shadow-[-1px_-1px_0px_10px_var(--white),1px_1px_0px_10px_var(--midgray)] rounded-lg">
+              <select
+                required
+                onChange={(e) => { setUserrole(e.target.value) }}
+                name='staff/student'
+                id='userrole'
+                className='w-full px-4 outline-none text-gray-400 bg-transparent font-light '
+              >
+                <option selected value='none'> Student/staff</option>
+                <option value='student'> Student</option>
+                <option value='Staff'>Staff</option>
+              </select>
+              <FaUserGraduate className='text-gray-700 bg-white' />
+            </div>
+            {/* if student */}
+            {
+              (userrole == 'student') && (
+                <div className="flex bg-white w-full items-center justify-center shadow-[-1px_-1px_0px_10px_var(--white),1px_1px_0px_10px_var(--midgray)] rounded-lg">
+                  <select
+                    required
+                    onChange={(e) => { setUserrole(e.target.value) }}
+                    name='staff/student'
+                    id='userrole'
+                    className='w-full px-4 outline-none text-gray-400 bg-transparent font-light'
+                  >
+                    <option selected value='none'> Standard</option>
+                    {
+                      standard.map((std)=>{
+                        return <option key={std.value} value={std.value}>{std.std}</option>
+                      })
+                    }
+                  </select>
+                  <FaUserGraduate className='text-gray-700 bg-white' />
+                </div>
+              )
+            }
 
             <div className='flex gap-2'>
               <input
