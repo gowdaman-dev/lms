@@ -26,7 +26,7 @@ function Navigator({ children }) {
                         <div className="min-w-[300px] h-full flex flex-col  bg-blue-50 border border-l ">
                             <div className="flex px-5 py-5 justify-between w-full">
                                 <h1 className=' w-full  text-xl text-blue-500 tracking-wide font-bold'>EDULEARN</h1>
-                                <FaX className='md:hidden flex' onClick={() => setMenu(false)} />
+                                <FaX className='md:hidden flex text-blue-400' onClick={() => setMenu(false)} />
                             </div>
                             <div className="flex flex-col">
                                 <div className="w-full bg-white px-5 flex flex-col">
@@ -51,7 +51,7 @@ function Navigator({ children }) {
                 <div className="flex px-4 py-4 bg-blue-50 w-full">
                     <div onClick={() => setMenu(!menu)} className="p-1 cursor-pointer">
                         {
-                            menu ? <FaX className='text-2xl text-gray-800' /> : <FaBars className='text-2xl text-gray-800' />
+                            menu ? <FaX className='text-2xl text-blue-400' /> : <FaBars className='text-2xl text-blue-400' />
                         }
                     </div>
                 </div>
