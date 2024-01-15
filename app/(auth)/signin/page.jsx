@@ -10,9 +10,9 @@ export default function Home () {
           EduLearn
         </h1>
       </div>
-      <div className='sm:relative absolute bottom-0 left-0 flex flex-col md:w-1/2 w-full sm:h-full h-2/3 py-4 sm:bg-transparent  rounded-t-[40px] items-center justify-center'>
+      <div className=' sm:relative absolute bottom-0 left-0 flex flex-col md:w-1/2 w-full sm:h-full h-2/3 py-4 sm:bg-transparent bg-white rounded-t-[40px] items-center justify-center'>
         <form action='' method='post' className='flex flex-col w-[300px]'>
-          <div className='w-full flex flex-col sm:gap-8 gap-10'>
+          <div className='w-full flex flex-col sm:gap-8 gap-6'>
             <h1 className='text-center text-4xl text-blue-600 font-bold'>
               Sign In
             </h1>
@@ -38,7 +38,7 @@ export default function Home () {
                 id='rememberme'
                 required
               />
-              <label className='text-[12px] text-gray-700' htmlFor='rememberme'>
+              <label className='text-[12px] text-gray-700 cursor-pointer' htmlFor='rememberme'>
                 Remember me
               </label>
             </div>

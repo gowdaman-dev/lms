@@ -4,14 +4,14 @@ import Input from '@/components/Input'
 export default function Home () {
   return (
     <div className=' flex h-screen w-screen bg-[var(--authbg)]'>
-      <div className='flex sm:hidden w-full h-1/3 items-center justify-center bg-[var(--authgraydient)]'>
-        <h1 className='text-center text-4xl text-blue-400 font-[calibari]'>
+      <div className='flex sm:hidden w-full h-1/5 items-center justify-center bg-[var(--authgraydient)]'>
+        <h1 className='text-center  text-4xl text-blue-400 font-[calibari]'>
           EduLearn
         </h1>
       </div>
-      <div className='sm:relative absolute bottom-0 left-0 flex flex-col md:w-1/2 w-full sm:h-full h-2/3 py-4 sm:bg-transparent bg-white rounded-t-[40px] items-center justify-center'>
+      <div className='sm:relative absolute bottom-0 left-0 flex flex-col md:w-1/2 w-full sm:h-full h-4/5 py-4 sm:bg-transparent bg-white rounded-t-[40px] items-center justify-center'>
         <form action='' method='post' className='flex flex-col w-[300px]'>
-          <div className='w-full flex flex-col sm:gap-8 gap-10'>
+          <div className='w-full flex flex-col gap-6 sm:gap-8'>
             <h1 className='text-center text-4xl text-blue-600 font-bold'>
               Sign UP
             </h1>
@@ -52,7 +52,7 @@ export default function Home () {
                 id='rememberme'
                 required
               />
-              <label className='text-[12px] text-gray-700' htmlFor='rememberme'>
+              <label className='text-[12px] text-gray-700 cursor-pointer' htmlFor='rememberme'>
                 Remember me
               </label>
             </div>
