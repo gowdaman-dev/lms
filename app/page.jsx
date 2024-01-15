@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Children } from 'react'
 
 function page() {
   return (
-    <div>
-      
-    </div>
+   <div className="">
+    home
+   </div>
   )
 }
 
