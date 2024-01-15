@@ -112,7 +112,7 @@ export default function Home() {
             </div>
             {/* if student */}
             {
-              (userrole == 'staff') ?
+              (userrole == 'student') && (
                 <div className="flex bg-white w-full items-center justify-center shadow-[-1px_-1px_0px_10px_var(--white),1px_1px_0px_10px_var(--midgray)] rounded-lg">
                   <select
                     required
@@ -122,31 +122,38 @@ export default function Home() {
                   >
                     <option selected value='none'> Standard</option>
                     {
-                      standard.map((std) => {
+                      standard.map((std)=>{
                         return <option key={std.value} value={std.value}>{std.std}</option>
                       })
                     }
                   </select>
                   <FaUserGraduate className='text-gray-700 bg-white' />
                 </div>
-                :
-                <div className="flex bg-white w-full items-center justify-center shadow-[-1px_-1px_0px_10px_var(--white),1px_1px_0px_10px_var(--midgray)] rounded-lg">
-                  <select
-                    required
-                    name='staff/student'
-                    id='userrole'
-                    className='w-full px-4 outline-none text-gray-400 bg-transparent font-light'
-                  >
-                    <option selected value='none'> Standard</option>
-                    {
-                      standard.map((std) => {
-                        return <option key={std.value} value={std.value}>{std.std}</option>
-                      })
-                    }
-                  </select>
-                  <FaUserGraduate className='text-gray-700 bg-white' />
-                </div>
+              )
             }
+            {/* if staff */}
+            {
+              (userrole == 'staff') && (
+                <div className="flex bg-white w-full items-center justify-center shadow-[-1px_-1px_0px_10px_var(--white),1px_1px_0px_10px_var(--midgray)] rounded-lg">
+                  <select
+                    required
+                    name='staff/student'
+                    id='userrole'
+                    multiple={true}
+                    className='w-full px-4 outline-none text-gray-400 bg-transparent font-light'
+                  >
+                    <option selected value='none'> Standard</option>
+                    {
+                      standard.map((std)=>{
+                        return <option key={std.value} value={std.value}>{std.std}</option>
+                      })
+                    }
+                  </select>
+                  <FaUserGraduate className='text-gray-700 bg-white' />
+                </div>
+              )
+            }
+
             <div className='flex gap-2'>
               <input
                 className='accent-white'
