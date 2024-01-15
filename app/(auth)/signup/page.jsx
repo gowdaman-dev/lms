@@ -65,7 +65,7 @@ export default function Home() {
     }),
     placeholder: (baseStyles, state) => ({
       ...baseStyles,
-      fontSize: '16px',
+      fontSize: '15px',
       display: 'flex',
       fontWeight: '300',
       color:'gray'
