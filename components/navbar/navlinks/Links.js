@@ -1,9 +1,9 @@
-import { FaChalkboardUser, FaGauge, FaNoteSticky, FaNotesMedical, FaSchool, FaUser, FaUserTie, FaVideo } from 'react-icons/fa6'
+import { FaChalkboardUser, FaGauge, FaNoteSticky, FaNotesMedical, FaRegNewspaper, FaRegUser, FaSchool, FaUser, FaUserTie, FaVideo} from 'react-icons/fa6'
 const NavLinks = {
     student:[
         {
             lable:'Dashboard',
-            path:'/',
+            path:'/dashboard',
             icon: <FaGauge/>
 
         },
@@ -22,7 +22,7 @@ const NavLinks = {
         {
             lable:'PDF Notes',
             path:'/notes',
-            icon:<FaNoteSticky/>
+            icon:<FaRegNewspaper/>
 
         },
     ],
@@ -36,7 +36,7 @@ const NavLinks = {
         {
             lable:'Account',
             path:'/account',
-            icon:<FaUser/>
+            icon:<FaRegUser/>
 
         },
         {
@@ -48,7 +48,7 @@ const NavLinks = {
         {
             lable:'PDF Notes',
             path:'/notes',
-            icon:<FaNoteSticky/>
+            icon:<FaRegNewspaper/>
 
         },
     ],

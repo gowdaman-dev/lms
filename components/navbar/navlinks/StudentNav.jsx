@@ -2,6 +2,7 @@ import React from 'react'
 import NavLinks from './Links'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { FaRightFromBracket, FaRightToBracket } from 'react-icons/fa6';
 function StudentNav() {
     const navlinks = NavLinks.student;
     const crtpath = usePathname()
@@ -21,6 +22,7 @@ function StudentNav() {
                     </Link>
                 })
             }
+            <button className='px-4 text-xl text-red-400 flex items-center justify-start gap-2'><FaRightFromBracket/><p className='text-sm'>Logout</p></button>
         </>
     )
 }
