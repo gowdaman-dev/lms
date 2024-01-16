@@ -11,10 +11,12 @@ const Survey = () => {
           <li>
             <FaChartColumn className="text-hBlue mt-2" />{" "}
           </li>
-          <li className="">Today Logins</li>
-          <li>{today}</li>
+          <div>
+            <li className="">Today Logins</li>
+            <li>{today}</li>
+          </div>
         </div>
-        <li className="item sm:order-first">{title}</li>
+        <li className="">{title}</li>
         <div className="flex gap-10 text-center">
           <li>
             <FaChartLine />
