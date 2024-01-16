@@ -34,7 +34,7 @@ function Navigator({ children }) {
             {/* left nav slider */}
             <div className={`top-0 left-0 md:relative md:transition-none transition-all ease duration-500 absolute md:translate-x-0 ${menu ? '-translate-x-[0%] ' : '-translate-x-[100%]'} `}>
                 <div className={`flex justify-end h-screen overflow-hidden`}>
-                    <div className="min-w-[300px] h-full flex flex-col  bg-blue-50 border border-l ">
+                    <div className="min-w-[300px] h-full flex flex-col  bg-[#F3F6F9] border border-l ">
                         <div className="flex px-5 py-5 justify-between w-full">
                             <h1 className=' w-full  text-xl text-blue-500 tracking-wide font-bold'>EDULEARN</h1>
                             <FaX className='md:hidden flex text-blue-400 cursor-pointer' onClick={() => setMenu(false)} />
@@ -58,7 +58,7 @@ function Navigator({ children }) {
             </div>
             {/* top nav bar */}
             <div className="flex flex-col w-full">
-                <div className="flex justify-between items-center px-4 py-2 bg-blue-50 w-full">
+                <div className="flex justify-between items-center px-4 py-2 bg-[#F3F6F9] w-full">
                     <div className=" flex items-center justify-center gap-2">
                         <div onClick={() => setMenu(!menu)} className=" md:hidden flex p-1 cursor-pointer">
                             <FaBars className='text-2xl text-blue-400' />
