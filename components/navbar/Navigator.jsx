@@ -21,8 +21,8 @@ function Navigator({ children }) {
     return (
         <div className='flex'>
             {/* left nav slider */}
-            <div className="relative top-0 left-0">
-                <motion.div className={`md:relative transition-all ease duration-500 absolute md:translate-x-0 ${menu?'-translate-x-[0%] ':'-translate-x-[100%]'} flex justify-end h-screen overflow-hidden`}>
+            <div className={`top-0 left-0 md:relative md:transition-none transition-all ease duration-500 absolute md:translate-x-0 ${menu?'-translate-x-[0%] ':'-translate-x-[100%]'} `}>
+                <motion.div className={`flex justify-end h-screen overflow-hidden`}>
                     <div className="min-w-[300px] h-full flex flex-col  bg-blue-50 border border-l ">
                         <div className="flex px-5 py-5 justify-between w-full">
                             <h1 className=' w-full  text-xl text-blue-500 tracking-wide font-bold'>EDULEARN</h1>
