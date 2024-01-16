@@ -48,7 +48,7 @@ function Navigator({ children }) {
             {/* top nav bar */}
             <div className="flex flex-col w-full">
                 <div className="flex justify-between items-center px-4 py-2 bg-blue-50 w-full">
-                    <div className="">
+                    <div className=" flex items-center justify-center gap-2">
                         <div onClick={() => setMenu(!menu)} className=" md:hidden flex p-1 cursor-pointer">
                             <FaBars className='text-2xl text-blue-400' />
                         </div>
