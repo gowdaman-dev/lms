@@ -8,19 +8,19 @@ const Survey = () => {
     <ul className="w-screen mt-10">
       <div className="w-2/3 mx-auto  flex  sm:flex-row flex-col lg:flex-row justify-between items-center ">
         <p className="sm:hidden py-2 flex text-2xl text-blue-500">{title}</p>
-        <div className="flex gap-10">
+        <div className="flex gap-10 text-center bg-blue-50 py-4 px-10 rounded-lg">
           <li>
-            <FaChartColumn className="text-hBlue mt-2" />{" "}
+            <FaChartColumn className="text-hBlue mt-2 " />{" "}
           </li>
           <div>
             <li className="">Today Logins</li>
             <li>{today}</li>
           </div>
         </div>
-        <li className="sm:flex hidden">{title}</li>
-        <div className="flex gap-10 text-center">
+        <li className="sm:flex hidden text-3xl text-blue-500">{title}</li>
+        <div className="flex gap-10 text-center bg-blue-50 py-4 px-10 rounded-lg">
           <li>
-            <FaChartLine />
+            <FaChartLine className="text-hBlue mt-2 text-4xl" />
           </li>
           <div>
             <li>Total Students</li>
