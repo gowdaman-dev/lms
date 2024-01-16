@@ -4,7 +4,7 @@ const table = () => {
   return (
    
       <Admin />
-     
+     //new
     
   )
 }
