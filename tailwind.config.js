@@ -13,7 +13,8 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors:{
-        'cBlue':'#79CAFF',
+        'lBlue':'#79CAFF',
+        'hBlue':'#009CFF',
         'borHead':"#B9B9B9",
         'borData' : '#C7C7C7'
 
