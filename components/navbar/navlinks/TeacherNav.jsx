@@ -10,7 +10,7 @@ function TeacherNav({ standard }) {
     const crtpath = usePathname()
     const [addnotes, setaddNotes] = useState(false)
     return (
-        <div className=''>
+        <div className='flex flex-col gap-2'>
             {
                 navlinks.map((item) => {
                     return <Link
