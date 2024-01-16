@@ -8,4 +8,3 @@ const table = () => {
 }
 
 export default table
-ls
