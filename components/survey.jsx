@@ -10,7 +10,7 @@ const Survey = () => {
         <p className="sm:hidden py-2 flex text-2xl text-blue-500">{title}</p>
         <div className="flex gap-10 text-center bg-blue-50 py-4 px-10 rounded-lg">
           <li>
-            <FaChartColumn className="text-hBlue mt-2 " />{" "}
+            <FaChartColumn className="text-hBlue mt-2 text-4xl " />
           </li>
           <div>
             <li className="">Today Logins</li>
