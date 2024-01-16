@@ -19,7 +19,7 @@ function TeacherNav({ standard }) {
                         className={`text-gray-800 w-[90%] py-3 px-4 flex items-center gap-2 text-xl rounded-r-full ${(crtpath == item.path) ? "shadow-[1px_1px_0px_0px] shadow-gray-500/[.5] bg-white" : ""} `}
                     >
                         {item.icon}
-                        <p className='text-sm'>
+                        <p className='text-sm font-light'>
                             {item.lable}
                         </p>
                     </Link>
@@ -29,11 +29,11 @@ function TeacherNav({ standard }) {
                 <div className={`flex items-center w-[90%] ${addnotes?'bg-white rounded-tr-[20px]':''} justify-between text-xl px-4 text-gray-800 gap-2 py-2`}>
                     <div className="flex gap-2">
                         <FaNotesMedical />
-                        <h1 className='text-sm'>Notes</h1>
+                        <h1 className='text-sm font-light'>Notes</h1>
                     </div>
                     <div onClick={() => setaddNotes(!addnotes)} className="">
                         {
-                            addnotes ? <FaAngleUp className='text-sm' /> : <FaAngleDown className='text-sm' />
+                            addnotes ? <FaAngleUp className='text-sm' /> : <FaAngleDown className='text-sm font-light' />
                         }
                     </div>
                 </div>
