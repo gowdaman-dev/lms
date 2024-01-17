@@ -68,19 +68,11 @@ const table = () => {
 
   const headings = Object.keys(data[0]);
 
-  // Use useEffect to import Link only on the client side
-  useEffect(() => {
-    const dynamicImportLink = async () => {
-      const { default: DynamicLink } = await import("next/link");
-      // Assign the dynamic Link component to a variable
-      window.DynamicLink = DynamicLink;
-    };
-    dynamicImportLink();
-  }, []);
+
 
   return (
-    <div className="flex justify-center">
-      <table className="w-3/5">
+    <div className="flex justify-center overflow-x-auto">
+      <table className="w-[72%]">
         <thead>
           <tr className="border-b text-center bg-blue-100 text-gray-600">
             {headings.map((heading) =>
@@ -98,13 +90,7 @@ const table = () => {
               {headings.map((header) =>
                 header === "id" ? null : header === "Details" ? (
                   <td key={value["id"]} className="text-center">
-                   {window.DynamicLink ? (
-                        <window.DynamicLink href={value[header]}>
-                          <a>{value[header]}</a>
-                        </window.DynamicLink>
-                      ) : (
-                        value[header]
-                      )}
+                   {value[header]}
                   </td>
                 ) : (
                   <td key={value["id"]} className="text-center">

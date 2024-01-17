@@ -21,7 +21,7 @@ const Admin = () => {
           <AdminLine/>
           </section>
       </div>
-      <div className='mt-20'>
+      <div className='mt-20  w-full '>
 
       <Table />
       </div>
