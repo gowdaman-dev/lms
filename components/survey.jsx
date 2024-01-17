@@ -17,8 +17,8 @@ const Survey = () => {
             <li>{today}</li>
           </div>
         </div>
-        <li className="sm:flex hidden text-3xl text-blue-500">{title}</li>
-        <div className="flex gap-10 text-center bg-blue-50 py-4 px-10 rounded-lg">
+        <li className="item sm:order-first">{title}</li>
+        <div className="flex gap-10 text-center">
           <li>
             <FaChartLine className="text-hBlue mt-2 text-4xl" />
           </li>
