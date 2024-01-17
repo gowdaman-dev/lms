@@ -16,7 +16,7 @@ const staffstandard = [
     },
 ]
 
-function Navigator({children}{ children, role }) {
+function Navigator({children, role }) {
     const [menu, setMenu] = useState(false)
     return (
         <div className='flex flex-col'>
