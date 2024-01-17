@@ -1,5 +1,5 @@
-"use client";
-import React, { useEffect } from "react";
+import React from 'react'
+import Link from 'next/link';
 
 const table = () => {
   const data = [
@@ -81,39 +81,38 @@ const table = () => {
 
 
   return (
-    <div className="flex justify-center overflow-x-auto">
-      <table className="md:w-[80%]">
-        <thead>
-          <tr className="border-b text-center bg-blue-100 text-gray-600">
-            {headings.map((heading) =>
-              heading !== "id" ? (
-                <th key={heading} className="p-2 text-center">
-                  {heading}
-                </th>
-              ) : null
-            )}
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((value) => (
-            <tr key={value["id"]} className="border-b">
-              {headings.map((header) =>
-                header === "id" ? null : header === "Details" ? (
-                  <td key={value["id"]} className="text-center">
-                   {value[header]}
-                  </td>
-                ) : (
-                  <td key={value["id"]} className="text-center">
-                    {value[header]}
-                  </td>
-                )
-              )}
+    <div className="w-full border-b rounded-lg overflow-x-scroll">
+      <table className='w-full'>
+        <tr className='border-b text-center bg-blue-100 text-gray-600'>
+          {
+            headings.map((heading => {
+              return (
+                heading !== 'id' ? (
+                  <th key={heading} className='p-2 text-center'>{heading}</th>
+                ) : null
+              )
+            }))
+          }
+        </tr>
+        {
+          data.map((value) => {
+            return <tr className='border-b'>
+              {
+                headings.map((header)=>{
+                  return (
+                    header === 'id'?null:
+                    header === 'Details'?<td className='text-center'><Link href={value[header]}>{value[header]}</Link></td>:
+                    (
+                      <td className='text-center'>{value[header]}</td>
+                    )
+                  )
+                })
+              }
             </tr>
           ))}
         </tbody>
       </table>
-      </div>
-  );
-};
-
-export default table;
+    </div>
+  )
+}
+export default table

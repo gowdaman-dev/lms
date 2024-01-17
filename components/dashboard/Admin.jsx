@@ -1,34 +1,28 @@
-import React from "react";
-import Table from "@/components/Table";
-import AdminBarMonth from "../charts/Admin/AdminBarMonth";
-import AdminLine from "../charts/Admin/AdminLine";
-import Survey from "../survey";
+import React from 'react'
+import Table from '@/components/Table'
+import AdminLine from '../charts/Admin/AdminLine'
+import Survey from '../survey'
+import AdminBar from '../charts/Admin/AdminBarMonth'
 const Admin = () => {
-  return (
-    <div className="h-auto w-screen ">
-      <div className=" py-5 ">
-        <Survey />
-      </div>
-      <div className="flex md:h-800px w-[80%] h-[500px] relative  flex-col md:flex-row justify-center md:gap-x-14 gap-y-5 items-center ">
-        <section className="md:h-full h-1/2 flex flex-col justify-center items-center w-[100%] md:w-[50%] bg-[#F2F5F9] rounded-lg">
-          <span className="text-gray-400 w-full text-left px-4">
-            Monthly Analysis
-          </span>
-          <AdminBarMonth />
-        </section>
-        <section className="md:h-full h-1/2 flex flex-col justify-center  items-center w-[100%] md:w-[50%] bg-[#F2F5F9] rounded-lg">
-          <span className="text-gray-400 w-full text-left px-4">
-            Today Analysis
-          </span>
 
+  return (
+    <>
+      <Survey/>
+      <div className='flex h-fit w-full flex gap-4 md:justify-between justify-center md:flex-row flex-col '>
+        <section className='h-[300px] md:w-1/2 w-full flex flex-col justify-center  items-center bg-[#F2F5F9] rounded-lg'>
+          <span className='text-gray-400 w-full text-left px-4'>Monthly Analysis</span>
+          <AdminBar />
+        </section>
+        <section className='h-[300px] md:w-1/2 w-full flex flex-col justify-center  items-center bg-[#F2F5F9] rounded-lg'>
+          <span className='text-gray-400 w-full text-left px-4'>Today Analysis</span>
           <AdminLine />
         </section>
       </div>
-      <div className="mt-20  ">
+      <div className='py-2 h-2/6 w-full'>
         <Table />
       </div>
-    </div>
-  );
-};
+    </>
+  )
+}
 
 export default Admin;

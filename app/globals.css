@@ -7,5 +7,13 @@
   --authbg:#EEEFF3;
   --white:#ffffff;
   --midgray:rgba(128, 128, 128, 0.3);
-  --authgraydient:linear-gradient(to bottom , var(--authbg) , white)
+  --authgraydient:linear-gradient(to bottom , var(--authbg) , white);
+  --navchildwidth:cal(100vw - 240px);
+}
+
+
+.homebg{
+  background: url('../public/background.jpg');
+  background-size: cover;
+  background-position: center;
 }

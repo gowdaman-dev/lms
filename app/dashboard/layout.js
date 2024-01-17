@@ -9,8 +9,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <Navigator>
-            {children}
-        </Navigator>
+        <div className="min-w-screen h-fit">
+            <Navigator>
+                {children}
+            </Navigator>
+        </div>
     )
 }

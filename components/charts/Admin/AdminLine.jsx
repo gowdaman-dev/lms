@@ -1,7 +1,7 @@
 'use client'
 import {
-  LineChart,
-  Line,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -22,12 +22,12 @@ function AdminLine () {
     {
       Time: 9,
       login: 700,
-      logout: 200
+      logout: 150
     },
     {
       Time: 10,
       login: 500,
-      logout: 300
+      logout: 170
     },
     {
       Time: 11,
@@ -37,13 +37,13 @@ function AdminLine () {
     {
       Time: 12,
       login: 1300,
-      logout: 500
+      logout: 550
     }
   ]
 
   return (
     <ResponsiveContainer width='100%' height='100%'>
-      <LineChart data={data}  margin={{
+      <AreaChart data={data}  margin={{
             top: 5,
             right: 30,
             left: 20,
@@ -59,19 +59,19 @@ function AdminLine () {
           height={36}
           iconType='circle'
         />
-        <Line
-          type='monotone'
+        <Area
+        type="monotone"
           dataKey='login'
-          stroke='skyblue'
+          stroke='#3ec2c0'
+          fill='skyblue'
           activeDot={{ r: 8 }}
         />
-        <Line
-          type='monotone'
+        <Area
           dataKey='logout'
-          stroke='pink'
-          activeDot={{ r: 8 }}
+          stroke='#b612db'
+          fill='#D4C1E9'
         />
-      </LineChart>
+      </AreaChart>
     </ResponsiveContainer>
   )
 }
