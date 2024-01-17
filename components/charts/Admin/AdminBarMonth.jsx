@@ -11,7 +11,7 @@ function AdminBarMonth() {
       label:"Monthly Analysis",
       data:[300,400,700,1000,200,100,700],
    
-    borderRadius:10,
+    borderRadius:3,
     bodyColor:"red"
     }]
     
