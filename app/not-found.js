@@ -2,7 +2,7 @@ import React from 'react'
 
 function Notfound() {
   return (
-    <div>not-found</div>
+    <div className='h-screen w-screen'>not-found</div>
   )
 }
 

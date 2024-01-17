@@ -109,39 +109,3 @@ const table = () => {
   )
 }
 export default table
-
-
-
-{/* <TableContainer component={Paper} className='rounded-x w-full'>
-        <Table className='w-full' aria-label="simple table">
-          <TableHead className='bg-lBlue'>
-            <TableRow>
-              {headings.map((heading) => (
-                heading !== 'id' ? (
-                  <TableCell className='px-2 py-1 border border-1 border-borHead' align='center' key={heading}>{heading}</TableCell>
-                ) :
-                  null
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {data.map((value) => (
-              <TableRow key={value.id}  >
-
-                {headings.map((heading) => (
-                  heading === 'id' ? (
-                    null
-                  ) : heading === "Details" ? (
-                    <TableCell key={heading} className='px-2 py-1 border border-1 border-borData' align="center"><button> {value[heading]} </button></TableCell>
-
-                  ) :
-
-                    (
-                      <TableCell key={heading} className='px-2 py-1 border border-1 border-borData' align="center"><button> {value[heading]}</button></TableCell>
-                    )
-                ))}
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer> */}
