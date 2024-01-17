@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/deepath/Documents/Deepath/vscode/web/node/demo/LMS-edulearn/app/layout\":[\"static/media/c9a5bc6a7c948fb0-s.p.woff2\"],\"/home/deepath/Documents/Deepath/vscode/web/node/demo/LMS-edulearn/app/dashboard/layout\":[\"static/media/c9a5bc6a7c948fb0-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
