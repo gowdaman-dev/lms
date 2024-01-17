@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { FaBars, FaClipboard, FaUser, FaX } from 'react-icons/fa6'
 import { AnimatePresence, motion } from 'framer-motion'
-import NavList from './NavList'
+import NavList from '@/'
 import Image from 'next/image'
 function Navigator ({ children }) {
   const userLinks = [
