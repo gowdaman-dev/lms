@@ -6,9 +6,7 @@ const table = () => {
     <>
       <Survey />
       <Admin />
-      </>
   )
 }
 
 export default table
-
