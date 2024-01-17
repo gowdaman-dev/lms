@@ -73,7 +73,7 @@ const table = () => {
   const headings = Object.keys(data[0]);
 
   return (
-    <div className="w-screen h-screen grid place-items-center">
+    <div className="w-screen h-2/6 grid place-items-center">
       <div className='w-fit m-auto'>
         <TableContainer component={Paper} className='rounded-x'>
           <Table className='w-full' aria-label="simple table">
@@ -84,7 +84,7 @@ const table = () => {
                     <TableCell className='px-2 py-1 border border-1 border-borHead' align='center' key={heading}>{heading}</TableCell>
                   ) :
                     null
-                ))}
+                ))}    
               </TableRow>
             </TableHead>
             <TableBody>
