@@ -11,7 +11,10 @@ const Survey = () => {
         <div className="flex gap-10 text-center bg-blue-50 py-4 px-10 rounded-lg">
           <li>
             <FaChartColumn className="text-hBlue mt-2 text-4xl " />
+<<<<<<< HEAD
             <FaChartColumn className="text-hBlue mt-2 " />{" "}
+=======
+>>>>>>> 716eb06 (layout)
           </li>
           <div>
             <li className="">Today Logins</li>
