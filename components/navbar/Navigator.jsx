@@ -63,27 +63,17 @@ function Navigator ({ children }) {
                     <NavList navlinks={userLinks} />
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-      <div className='flex flex-col w-full'>
-        <div className='flex px-4 py-4 bg-blue-50 w-full'>
-          <div onClick={() => setMenu(!menu)} className='p-1 cursor-pointer'>
-            {menu ? (
-              <FaX className='text-2xl text-blue-400' />
-            ) : (
-              <FaBars className='text-2xl text-blue-400' />
-            )}
-          </div>
+            </div>
+            <div className="flex">
+                <motion.div className="bg-[#F2F5F9] h-screen w-[250px] py-4 flex flex-col items-center">
+                    <TeacherNav standard={staffstandard}/>
+                </motion.div>
+                <div className="w-full flex flex-col items-center">
+                    {children}
+                </div>
+            </div>
         </div>
-        <div onClick={() => setMenu(false)} className=''>
-          {children}
-        </div>
-      </div>
-    </div>
-  )
+    )
 }
 
 export default Navigator
