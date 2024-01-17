@@ -9,3 +9,9 @@
   --midgray:rgba(128, 128, 128, 0.3);
   --authgraydient:linear-gradient(to bottom , var(--authbg) , white)
 }
+
+.homebg{
+  background: url('../public/background.jpg');
+  background-size: cover;
+  background-position: center;
+}

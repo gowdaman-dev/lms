@@ -4,7 +4,7 @@ import React from 'react'
 function page() {
   return (
     <div className=' w-full px-10 py-10'>
-      <Admin/>
+      Dashboard
     </div>
   )
 }
