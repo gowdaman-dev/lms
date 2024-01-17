@@ -1,10 +1,3 @@
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import React from 'react'
 import Link from 'next/link';
 
@@ -89,14 +82,14 @@ const table = () => {
         </tr>
         {
           data.map((value) => {
-            return <tr key={value['id']} className='border-b'>
+            return <tr className='border-b'>
               {
                 headings.map((header)=>{
                   return (
                     header === 'id'?null:
-                    header === 'Details'?<td key={value['id']} className='text-center'><Link href={value[header]}>{value[header]}</Link></td>:
+                    header === 'Details'?<td className='text-center'><Link href={value[header]}>{value[header]}</Link></td>:
                     (
-                      <td key={value['id']} className='text-center'>{value[header]}</td>
+                      <td className='text-center'>{value[header]}</td>
                     )
                   )
                 })
