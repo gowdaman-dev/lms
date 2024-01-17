@@ -53,7 +53,7 @@ function Navigator({ children, role }) {
                 </div>
             </div>
             <div className="flex">
-                <div className={`bg-[#F2F5F9] md:relative absolute top-0 left-0 ${menu ? "translate-x-0" : "-translate-x-[100%]"} easeInOut transition-all duration-500 md:-translate-x-0 tea  h-screen min-w-[250px] py-4 flex flex-col items-center`}>
+                <div className={`bg-[#F2F5F9] z-[10] md:relative absolute top-0 left-0 ${menu ? "translate-x-0" : "-translate-x-[100%]"} easeInOut transition-all duration-500 md:-translate-x-0 tea  h-screen min-w-[250px] py-4 flex flex-col items-center`}>
                     <div className="w-full flex px-4 py-2 md:hidden justify-end">
                         <Icon onClick={() => setMenu(false)} icon="material-symbols-light:close" height="30" width="30" />
                     </div>
