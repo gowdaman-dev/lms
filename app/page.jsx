@@ -34,19 +34,19 @@ function page() {
         <div className="w-full h-fit flex flex-wrap py-8 justify-center gap-5">
           <div className="max-w-[300px] h-fit">
             <h1 className='text-xl font-light text-sky-400'>User-Friendly Interface</h1>
-            <p className='text-gray-800 text-sm font-light'>EduLearn boasts an intuitive and user-friendly interface, ensuring a smooth and hassle-free experience for educators, students, and parents alike.</p>
+            <p className='text-gray-800 text-justify text-sm font-light'>EduLearn boasts an intuitive and user-friendly interface, ensuring a smooth and hassle-free experience for educators, students, and parents alike.</p>
           </div>
           <div className="max-w-[300px]">
             <h1 className='text-xl font-light text-sky-400'>Customizable Learning Paths</h1>
-            <p className='text-gray-800 text-sm font-light'>Tailor your learning experience with customizable courses and curriculum. EduLearn allows educators to create personalized learning paths to meet the unique needs of each student.</p>
+            <p className='text-gray-800 text-justify text-sm font-light'>Tailor your learning experience with customizable courses and curriculum. EduLearn allows educators to create personalized learning paths to meet the unique needs of each student.</p>
           </div>
           <div className="max-w-[300px]">
             <h1 className='text-xl font-light text-sky-400'>Interactive Multimedia Content</h1>
-            <p className='text-gray-800 text-sm font-light'>Say goodbye to dull textbooks! EduLearn incorporates multimedia elements such as videos, interactive quizzes, and simulations to make learning engaging and effective.</p>
+            <p className='text-gray-800 text-justify text-sm font-light'>Say goodbye to dull textbooks! EduLearn incorporates multimedia elements such as videos, interactive quizzes, and simulations to make learning engaging and effective.</p>
           </div>
           <div className="max-w-[300px]">
             <h1 className='text-xl font-light text-sky-400'>Real-time Progress Tracking</h1>
-            <p className='text-gray-800 text-sm font-light'>Keep tabs on your academic journey with real-time progress tracking. Parents and educators can monitor performance, identify strengths, and address areas that need improvement.</p>
+            <p className='text-gray-800 text-justify text-sm font-light'>Keep tabs on your academic journey with real-time progress tracking. Parents and educators can monitor performance, identify strengths, and address areas that need improvement.</p>
           </div>
         </div>
       </div>
