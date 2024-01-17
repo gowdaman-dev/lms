@@ -79,8 +79,8 @@ const table = () => {
   }, []);
 
   return (
-    <div className="w-full border-b rounded-lg overflow-hidden">
-      <table className="w-full">
+    <div className="flex justify-center">
+      <table className="w-3/5">
         <thead>
           <tr className="border-b text-center bg-blue-100 text-gray-600">
             {headings.map((heading) =>
@@ -98,11 +98,13 @@ const table = () => {
               {headings.map((header) =>
                 header === "id" ? null : header === "Details" ? (
                   <td key={value["id"]} className="text-center">
-                    {window.DynamicLink && (
-                      <window.DynamicLink href={value[header]}>
-                        <a>{value[header]}</a>
-                      </window.DynamicLink>
-                    )}
+                   {window.DynamicLink ? (
+                        <window.DynamicLink href={value[header]}>
+                          <a>{value[header]}</a>
+                        </window.DynamicLink>
+                      ) : (
+                        value[header]
+                      )}
                   </td>
                 ) : (
                   <td key={value["id"]} className="text-center">
@@ -114,7 +116,7 @@ const table = () => {
           ))}
         </tbody>
       </table>
-    </div>
+      </div>
   );
 };
 

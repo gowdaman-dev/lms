@@ -21,7 +21,6 @@ const Survey = () => {
         <div className="flex gap-10 text-center bg-blue-50 py-4 px-10 rounded-lg">
           <li>
             <FaChartLine className="text-hBlue mt-2 text-4xl" />
-            <FaChartLine className="text-hBlue mt-2 text-4xl" />
           </li>
           <div>
             <li>Total Students</li>
