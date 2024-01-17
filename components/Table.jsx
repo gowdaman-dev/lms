@@ -67,7 +67,7 @@ const table = () => {
   const headings = Object.keys(data[0]);
 
   return (
-    <div className="w-full border-b rounded-lg overflow-hidden">
+    <div className="w-full border-b rounded-lg overflow-x-scroll">
       <table className='w-full'>
         <tr className='border-b text-center bg-blue-100 text-gray-600'>
           {

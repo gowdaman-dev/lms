@@ -4,7 +4,7 @@ import { Icon, InlineIcon } from '@iconify/react'
 import Image from 'next/image'
 import StudentNav from './navlinks/StudentNav'
 import TeacherNav from './navlinks/TeacherNav'
-import { AnimatePresence, motion } from 'framer-motion'
+import Admin from '../dashboard/Admin'
 const staffstandard = [
     {
         lable: '1st standard',
@@ -16,7 +16,7 @@ const staffstandard = [
     },
 ]
 
-function Navigator({children, role }) {
+function Navigator({ children, role }) {
     const [menu, setMenu] = useState(false)
     return (
         <div className='flex flex-col'>
@@ -53,14 +53,14 @@ function Navigator({children, role }) {
                 </div>
             </div>
             <div className="flex">
-                    <div className={`bg-[#F2F5F9] md:relative absolute top-0 left-0 ${menu?"translate-x-0":"-translate-x-[100%]"} easeInOut transition-all duration-500 md:-translate-x-0 tea  h-screen w-[250px] py-4 flex flex-col items-center`}>
-                        <div className="w-full flex px-4 py-2 md:hidden justify-end">
-                            <Icon onClick={()=>setMenu(false)} icon="material-symbols-light:close" height="30" width="30"/>
-                        </div>
-                        <TeacherNav standard={staffstandard} />
+                <div className={`bg-[#F2F5F9] md:relative absolute top-0 left-0 ${menu ? "translate-x-0" : "-translate-x-[100%]"} easeInOut transition-all duration-500 md:-translate-x-0 tea  h-screen min-w-[250px] py-4 flex flex-col items-center`}>
+                    <div className="w-full flex px-4 py-2 md:hidden justify-end">
+                        <Icon onClick={() => setMenu(false)} icon="material-symbols-light:close" height="30" width="30" />
                     </div>
-                <div className="w-full flex flex-col items-center">
-{children}                    {children}
+                    <TeacherNav standard={staffstandard} />
+                </div>
+                <div className="w-[100%] p-10">
+                    <Admin />
                 </div>
             </div>
         </div>
