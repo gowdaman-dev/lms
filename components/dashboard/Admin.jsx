@@ -5,7 +5,7 @@ import AdminLine from '../charts/Admin/AdminLine'
 const Admin = () => {
   
   return (
-    <div className='w-full' className='h-screen'>
+    <div className='w-full h-screen'>
       <div className='h-1/6'>Header</div>
       <div className='flex h-2/6  w-screen relative  flex-col md:flex-row justify-center md:gap-x-14 gap-y-5 items-center '>
         <section className='md:h-full h-1/2  flex flex-col justify-center   items-center w-[80%] md:w-2/6 bg-[#F2F5F9] rounded-lg'>
