@@ -7,7 +7,7 @@ const Admin = () => {
     <div className='w-full'>
       <Table />
       </div>
-    </div>
+    
   )
 }
 
