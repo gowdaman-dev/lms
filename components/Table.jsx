@@ -73,7 +73,7 @@ const table = () => {
   const headings = Object.keys(data[0]);
 
   return (
-    <div className="w-screen h-2/6 grid place-items-center">
+    <div className="w-screen h-full grid place-items-center">
       <div className='w-fit m-auto'>
         <TableContainer component={Paper} className='rounded-x'>
           <Table className='w-full' aria-label="simple table">
