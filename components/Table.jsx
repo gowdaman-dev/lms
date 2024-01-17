@@ -64,6 +64,16 @@ const table = () => {
       Status: "Active ",
       Details: "View",
     },
+    {
+      Student_Name: "deepath",
+      id: 7,
+      Type: "Minato",
+      Standard: "III standard",
+      Phone_Number: 123,
+      ERP_Number: 5454,
+      Status: "Active ",
+      Details: "View",
+    },
   ];
 
   const headings = Object.keys(data[0]);
@@ -72,7 +82,7 @@ const table = () => {
 
   return (
     <div className="flex justify-center overflow-x-auto">
-      <table className="w-[72%]">
+      <table className="md:w-[80%]">
         <thead>
           <tr className="border-b text-center bg-blue-100 text-gray-600">
             {headings.map((heading) =>
