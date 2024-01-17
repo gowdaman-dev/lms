@@ -1,10 +1,10 @@
 'use client'
-import React, { Children } from 'react'
+import React from 'react'
 import { InlineIcon } from '@iconify/react'
 import Image from 'next/image'
 import StudentNav from './navlinks/StudentNav'
 import TeacherNav from './navlinks/TeacherNav'
-
+import { motion } from 'framer-motion'
 const staffstandard = [
     {
         lable:'1st standard',
@@ -16,12 +16,13 @@ const staffstandard = [
     },
 ]
 
-function Navigator({children}) {
+function Navigator({children , role}) {
     return (
         <div className='flex flex-col'>
             <div className="navbar flex items-center justify-between px-10 py-2 w-screen bg-[#F2F5F9] border-b">
                 <div className="flex justify-between items-center gap-2">
-                    <h1 className='text-xl text-sky-600' >EduLearn</h1>
+                    <InlineIcon icon="ic:round-menu" height="30" width="30"/>
+                    <h1 className='md:flex hidden text-xl text-sky-600' >EduLearn</h1>
                 </div>
                 <form
                     action=""
@@ -51,9 +52,9 @@ function Navigator({children}) {
                 </div>
             </div>
             <div className="flex">
-                <div className="bg-[#F2F5F9] h-screen w-[250px] py-4 flex flex-col items-center">
+                <motion.div className="bg-[#F2F5F9] h-screen w-[250px] py-4 flex flex-col items-center">
                     <TeacherNav standard={staffstandard}/>
-                </div>
+                </motion.div>
                 <div className="flex-col">
                     {children}
                 </div>
