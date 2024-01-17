@@ -1,111 +1,121 @@
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import React from 'react'
-import Link from 'next/link';
+"use client";
+import React, { useEffect } from "react";
 
 const table = () => {
   const data = [
+    //  data array
     {
-      Student_Name: 'deepath',
+      Student_Name: "deepath",
       id: 1,
+      Type: "Minato",
       Standard: "III standard",
       Phone_Number: 123,
       ERP_Number: 5454,
-      Status: 'Active ',
-      Details: 'View'
-
+      Status: "Active ",
+      Details: "View",
     },
     {
-      Student_Name: 'deepath',
-      id: 1,
+      Student_Name: "deepath",
+      id: 2,
+      Type: "Minato",
       Standard: "III standard",
       Phone_Number: 123,
       ERP_Number: 5454,
-      Status: 'Active ',
-      Details: 'View'
-
+      Status: "Active ",
+      Details: "View",
     },
     {
-      Student_Name: 'deepath',
-      id: 1,
+      Student_Name: "deepath",
+      id: 3,
+      Type: "Minato",
       Standard: "III standard",
       Phone_Number: 123,
       ERP_Number: 5454,
-      Status: 'Active ',
-      Details: 'View'
-
+      Status: "Active ",
+      Details: "View",
     },
     {
-      Student_Name: 'deepath',
-      id: 1,
+      Student_Name: "deepath",
+      id: 4,
+      Type: "Minato",
       Standard: "III standard",
       Phone_Number: 123,
       ERP_Number: 5454,
-      Status: 'Active ',
-      Details: 'View'
-
+      Status: "Active ",
+      Details: "View",
     },
     {
-      Student_Name: 'deepath',
-      id: 1,
+      Student_Name: "deepath",
+      id: 5,
+      Type: "Minato",
       Standard: "III standard",
       Phone_Number: 123,
       ERP_Number: 5454,
-      Status: 'Active ',
-      Details: 'View'
-
-    }, {
-      Student_Name: 'deepath',
-      id: 1,
-      Standard: "III standard",
-      Phone_Number: 123,
-      ERP_Number: 5454,
-      Status: 'Active ',
-      Details: 'View'
-
+      Status: "Active ",
+      Details: "View",
     },
-
+    {
+      Student_Name: "deepath",
+      id: 6,
+      Type: "Minato",
+      Standard: "III standard",
+      Phone_Number: 123,
+      ERP_Number: 5454,
+      Status: "Active ",
+      Details: "View",
+    },
   ];
+
   const headings = Object.keys(data[0]);
+
+  // Use useEffect to import Link only on the client side
+  useEffect(() => {
+    const dynamicImportLink = async () => {
+      const { default: DynamicLink } = await import("next/link");
+      // Assign the dynamic Link component to a variable
+      window.DynamicLink = DynamicLink;
+    };
+    dynamicImportLink();
+  }, []);
 
   return (
     <div className="w-full border-b rounded-lg overflow-hidden">
-      <table className='w-full'>
-        <tr className='border-b text-center bg-blue-100 text-gray-600'>
-          {
-            headings.map((heading => {
-              return (
-                heading !== 'id' ? (
-                  <th key={heading} className='p-2 text-center'>{heading}</th>
-                ) : null
-              )
-            }))
-          }
-        </tr>
-        {
-          data.map((value) => {
-            return <tr key={value['id']} className='border-b'>
-              {
-                headings.map((header)=>{
-                  return (
-                    header === 'id'?null:
-                    header === 'Details'?<td key={value['id']} className='text-center'><Link href={value[header]}>{value[header]}</Link></td>:
-                    (
-                      <td key={value['id']} className='text-center'>{value[header]}</td>
-                    )
-                  )
-                })
-              }
+      <table className="w-full">
+        <thead>
+          <tr className="border-b text-center bg-blue-100 text-gray-600">
+            {headings.map((heading) =>
+              heading !== "id" ? (
+                <th key={heading} className="p-2 text-center">
+                  {heading}
+                </th>
+              ) : null
+            )}
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((value) => (
+            <tr key={value["id"]} className="border-b">
+              {headings.map((header) =>
+                header === "id" ? null : header === "Details" ? (
+                  <td key={value["id"]} className="text-center">
+                    {window.DynamicLink && (
+                      <window.DynamicLink href={value[header]}>
+                        <a>{value[header]}</a>
+                      </window.DynamicLink>
+                    )}
+                  </td>
+                ) : (
+                  <td key={value["id"]} className="text-center">
+                    {value[header]}
+                  </td>
+                )
+              )}
             </tr>
-          })
-        }
+          ))}
+        </tbody>
       </table>
     </div>
-  )
-}
-export default table
+  );
+};
+
+export default table;

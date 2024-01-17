@@ -4,6 +4,7 @@ const Admin = () => {
   const std= "VII";
   return (
     <div className='w-full'>
+      
       <Table />
     </div>
   )
