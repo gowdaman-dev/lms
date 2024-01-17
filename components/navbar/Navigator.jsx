@@ -20,7 +20,7 @@ function Navigator({ children, role }) {
     const [menu, setMenu] = useState(false)
     return (
         <div className='flex flex-col'>
-            <div className="navbar flex items-center justify-between px-10 py-2 w-screen bg-[#F2F5F9] border-b">
+            <div className="navbar flex items-center justify-between md:px-10 px-6 py-2 w-screen bg-[#F2F5F9] border-b">
                 <div className="flex justify-between items-center gap-2">
                     <InlineIcon onClick={() => setMenu(true)} icon="ic:round-menu" className='md:hidden flex' height="30" width="30" />
                     <h1 className='md:flex hidden text-xl text-sky-600' >EduLearn</h1>
