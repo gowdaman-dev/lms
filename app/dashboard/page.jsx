@@ -1,9 +1,10 @@
 import Admin from '@/components/dashboard/Admin'
 import React from 'react'
-
+import Admin from '@/components/dashboard/Admin'
 function page() {
   return (
-    <div className='py-10'>
+    <div>
+      
       <Admin/>
     </div>
   )
