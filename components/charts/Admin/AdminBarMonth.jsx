@@ -14,7 +14,9 @@ import React from 'react'
 
 function AdminBar () {
  
-  const data = [
+
+
+  const data=[
     {
       month: 'jan',
       login:400,
@@ -42,9 +44,16 @@ function AdminBar () {
     }
   ]
 
-  return (
+  return (<>
+  
+  <style>
+        {`
+.recharts-legend-item-text   {       
+     fill: blue !important; /* Change the text color here */
+          }
+        `}
+      </style>
     <ResponsiveContainer width="100%" height="100%">
-
     <BarChart  data={data}  margin={{
             top: 5,
             right: 30,
@@ -59,15 +68,16 @@ function AdminBar () {
             verticalAlign="top"
             align="center"
             height={36}
-            iconType='circle'
+            iconType='triangle'
           />
-      <Bar dataKey="login" fill="skyblue" activeBar={<Rectangle fill="pink" stroke="black" />} />
-      <Bar dataKey="logout" fill="pink" activeBar={<Rectangle fill="red" stroke="black" />} />
-      
+          
+      <Bar dataKey="login" fill="#90e0ef" stroke='#00b4d8' />
+    
 
 
     </BarChart>
     </ResponsiveContainer>
+  </>
   )
 }
 
