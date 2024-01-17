@@ -1,27 +1,29 @@
 'use client'
-import React from 'react'
-import { InlineIcon } from '@iconify/react'
+import React, { useState } from 'react'
+import { Icon, InlineIcon } from '@iconify/react'
 import Image from 'next/image'
 import StudentNav from './navlinks/StudentNav'
 import TeacherNav from './navlinks/TeacherNav'
-
+import { AnimatePresence, motion } from 'framer-motion'
 const staffstandard = [
     {
-        lable:'1st standard',
-        path:'1'
+        lable: '1st standard',
+        path: '1'
     },
     {
-        lable:'2nd standard',
-        path:'2'
+        lable: '2nd standard',
+        path: '2'
     },
 ]
 
-function Navigator({children}) {
+function Navigator({children}{ children, role }) {
+    const [menu, setMenu] = useState(false)
     return (
         <div className='flex flex-col'>
-            <div className="navbar flex items-center justify-between px-10 py-2 w-screen bg-[#F2F5F9] border-b">
+            <div className="navbar flex items-center justify-between md:px-10 px-6 py-2 w-screen bg-[#F2F5F9] border-b">
                 <div className="flex justify-between items-center gap-2">
-                    <h1 className='text-xl text-sky-600' >EduLearn</h1>
+                    <InlineIcon onClick={() => setMenu(true)} icon="ic:round-menu" className='md:hidden flex' height="30" width="30" />
+                    <h1 className='md:flex hidden text-xl text-sky-600' >EduLearn</h1>
                 </div>
                 <form
                     action=""
@@ -51,11 +53,14 @@ function Navigator({children}) {
                 </div>
             </div>
             <div className="flex">
-                <div className="bg-[#F2F5F9] h-screen w-[250px] py-4 flex flex-col items-center">
-                    <TeacherNav standard={staffstandard}/>
-                </div>
-                <div className="flex-col">
-{children}
+                    <div className={`bg-[#F2F5F9] md:relative absolute top-0 left-0 ${menu?"translate-x-0":"-translate-x-[100%]"} easeInOut transition-all duration-500 md:-translate-x-0 tea  h-screen w-[250px] py-4 flex flex-col items-center`}>
+                        <div className="w-full flex px-4 py-2 md:hidden justify-end">
+                            <Icon onClick={()=>setMenu(false)} icon="material-symbols-light:close" height="30" width="30"/>
+                        </div>
+                        <TeacherNav standard={staffstandard} />
+                    </div>
+                <div className="w-full flex flex-col items-center">
+{children}                    {children}
                 </div>
             </div>
         </div>
