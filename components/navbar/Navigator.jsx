@@ -55,7 +55,7 @@ function Navigator({children , role}) {
                 <motion.div className="bg-[#F2F5F9] h-screen w-[250px] py-4 flex flex-col items-center">
                     <TeacherNav standard={staffstandard}/>
                 </motion.div>
-                <div className="flex-col">
+                <div className="flex-col w-full flex flex-col items-center">
                     {children}
                 </div>
             </div>
