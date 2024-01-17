@@ -60,7 +60,7 @@ function Navigator({ children, role }) {
                     <TeacherNav standard={staffstandard} />
                 </div>
                 <div className="w-[100%] p-10">
-                    <Admin />
+                    {children}
                 </div>
             </div>
         </div>
