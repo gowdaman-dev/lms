@@ -3,7 +3,7 @@ import React from 'react'
 
 function page() {
   return (
-    <div className='py-10'>
+    <div className=' w-full px-10 py-10'>
       <Admin/>
     </div>
   )
