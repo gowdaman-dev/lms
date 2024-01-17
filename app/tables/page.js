@@ -3,10 +3,9 @@ import Admin from '@/components/dashboard/Admin'
 import Survey from '@/components/survey'
 const table = () => {
   return (
-    <>
-      <Survey />
       <Admin />
-      </>
+     
+    
   )
 }
 
