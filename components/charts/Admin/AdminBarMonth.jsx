@@ -1,49 +1,74 @@
 "use client"
+import {
+  BarChart,
+  Bar,
+  Rectangle,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer
+} from 'recharts'
 import React from 'react'
-import { Bar} from 'react-chartjs-2'
-import { Chart as chartjs } from 'chart.js/auto'
 
-function AdminBarMonth() {
-  
-  const chart={
-    labels:["jan","Feb","Mar","Apr","May","Jun","Jul"],
-    datasets:[{
-      label:"Monthly Analysis",
-      data:[300,400,700,1000,200,100,700],
-   
-    borderRadius:3,
-    bodyColor:"red"
-    }]
-    
+function AdminBar () {
+ 
+  const data = [
+    {
+      month: 'jan',
+      login:400,
+      logout: 100
+    },
+    {
+      month: 'Feb',
+      login:700,
+      logout: 200
+    },
+    {
+      month: 'Mar',
+      login:500,
+      logout: 300
+    },
+    {
+      month: 'Aip',
+      login:800,
+      logout: 400
+    },
+    {
+      month: 'May',
+      login:1300,
+      logout: 500
+    }
+  ]
 
-  }
-  const options = {
-    scales: {
-      x: {
-        ticks: {
-          color: 'blue', // Change x-axis label color
-        },
-      },
-      y: {
-        ticks: {
-          color: 'blue',
-          // Change y-axis label color
-        },
-        beginAtZero: true,
-      },
-    },
-    plugins: {
-      legend: {
-        labels: {
-          color: 'black', // Change legend text color
-         
-        },
-      },
-    },
-  };
   return (
-   <Bar data={chart} options={options} />
+    <ResponsiveContainer width="100%" height="100%">
+
+    <BarChart  data={data}  margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}>
+      <CartesianGrid strokeDasharray='3 3' />
+      <XAxis dataKey='month' />
+      <YAxis dataKey="login" />
+      <Tooltip />
+      <Legend
+            verticalAlign="top"
+            align="center"
+            height={36}
+            iconType='circle'
+          />
+      <Bar dataKey="login" fill="skyblue" activeBar={<Rectangle fill="pink" stroke="black" />} />
+      <Bar dataKey="logout" fill="pink" activeBar={<Rectangle fill="red" stroke="black" />} />
+      
+
+
+    </BarChart>
+    </ResponsiveContainer>
   )
 }
 
-export default AdminBarMonth
+export default AdminBar

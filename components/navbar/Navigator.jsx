@@ -16,7 +16,7 @@ const staffstandard = [
     },
 ]
 
-function Navigator() {
+function Navigator({children}) {
     return (
         <div className='flex flex-col'>
             <div className="navbar flex items-center justify-between px-10 py-2 w-screen bg-[#F2F5F9] border-b">
@@ -55,7 +55,7 @@ function Navigator() {
                     <TeacherNav standard={staffstandard}/>
                 </div>
                 <div className="flex-col">
-
+{children}
                 </div>
             </div>
         </div>
