@@ -2,7 +2,7 @@ import React from 'react'
 import NavLinks from './Links'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FaRightFromBracket, FaRightToBracket } from 'react-icons/fa6';
+import { InlineIcon } from '@iconify/react';
 function StudentNav() {
     const navlinks = NavLinks.student;
     const crtpath = usePathname()
@@ -13,7 +13,7 @@ function StudentNav() {
                     return <Link
                         href={item.path}
                         key={item.lable}
-                        className={`text-gray-800 w-[90%] py-3 px-4 flex items-center gap-2 text-xl rounded-r-full ${(crtpath == item.path)?"shadow-[1px_1px_0px_0px] shadow-gray-500/[.5] bg-white":""} `}
+                        className={`text-gray-800 w-[90%] py-3 px-4 flex items-center gap-2 text-xl rounded-lg ${(crtpath == item.path)?"bg-white":""} `}
                     >
                         {item.icon}
                         <p className='text-sm font-light'>
@@ -22,7 +22,7 @@ function StudentNav() {
                     </Link>
                 })
             }
-            <button className='px-4 text-xl text-red-400 flex items-center justify-start gap-2'><FaRightFromBracket/><p className='text-sm font-light'>Logout</p></button>
+            <button className='text-red-600 w-[90%] py-3 px-5 flex items-center gap-2 text-xl rounded-lg'><InlineIcon icon='solar:logout-2-outline' className='rotate-180' height="25" width="25"/><p className='text-sm font-light'>Logout</p></button>
         </>
     )
 }

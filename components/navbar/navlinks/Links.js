@@ -1,28 +1,29 @@
-import { FaChalkboardUser, FaGauge, FaNoteSticky, FaNotesMedical, FaRegNewspaper, FaRegUser, FaSchool, FaUser, FaUserTie, FaVideo} from 'react-icons/fa6'
+import { InlineIcon } from "@iconify/react"
+
 const NavLinks = {
     student:[
         {
             lable:'Dashboard',
             path:'/dashboard',
-            icon: <FaGauge/>
+            icon: <InlineIcon icon="mdi-light:view-dashboard" height="25" width="25"/>
 
         },
         {
             lable:'Account',
             path:'/account',
-            icon:<FaUser/>
-
+            icon:<InlineIcon icon="ph:user-light" height="25" width="25"/>
+            
         },
         {
             lable:'Video Tutorial',
             path:'/tutstream',
-            icon:<FaVideo/>
+            icon:<InlineIcon icon="ph:video-light" height="25" width="25"/>
 
         },
         {
             lable:'PDF Notes',
             path:'/notes',
-            icon:<FaRegNewspaper/>
+            icon:<InlineIcon icon="solar:notes-minimalistic-line-duotone" height="25" width="25"/>
 
         },
     ],
@@ -30,25 +31,19 @@ const NavLinks = {
         {
             lable:'Dashboard',
             path:'/dashboard',
-            icon:<FaGauge/>
+            icon:<InlineIcon icon="mdi-light:view-dashboard" height="25" width="25"/>
 
         },
         {
             lable:'Account',
             path:'/account',
-            icon:<FaRegUser/>
+            icon:<InlineIcon icon="ph:user-light" height="25" width="25"/>
 
         },
         {
             lable:'Video Tutorial',
             path:'/tutstream',
-            icon:<FaVideo/>
-
-        },
-        {
-            lable:'PDF Notes',
-            path:'/notes',
-            icon:<FaRegNewspaper/>
+            icon:<InlineIcon icon="ph:video-light" height="25" width="25"/>
 
         },
     ],
@@ -56,57 +51,55 @@ const NavLinks = {
         {
             lable:'Dashboard',
             path:'/dashboard',
-            icon:<FaGauge/>
+            icon:<InlineIcon icon="mdi-light:view-dashboard" height="25" width="25"/>
 
         },
         {
             lable:'Students',
             path:'/studentsaccounts',
-            icon:<FaSchool/>
+            icon:<InlineIcon icon="ph:student-light" height="25" width="25"/>
 
         },
         {
             lable:'Staff',
             path:'/staffaccounts',
-            icon:  <FaChalkboardUser/>
-
+            icon: <InlineIcon icon="healthicons:city-worker" height="25" width="25"/>
         },
         {
             lable:'Notes',
             path:'/notes',
-            icon:<FaNotesMedical/>
-
+            
         },
     ],
     superadmin:[
         {
             lable:'Dashboard',
             path:'/dashboard',
-            icon:<FaGauge/>
+            icon:<InlineIcon icon="mdi-light:view-dashboard" height="25" width="25"/>
 
         },
         {
             lable:'teachers',
             path:'/staffaccounts',
-            icon:<FaChalkboardUser/>
+            icon:<InlineIcon icon="healthicons:city-worker" height="25" width="25"/>
 
         },
         {
             lable:'Students',
             path:'/studentsaccounts',
-            icon: <FaSchool/>
-
+            icon: <InlineIcon icon="ph:student-light" height="25" width="25"/>
+            
         },
         {
             lable:'Admins',
             path:'/adminaccounts',
-            icon:<FaUserTie/>
+            icon: <InlineIcon icon="material-symbols-light:admin-panel-settings-outline" height="25" width="25"/>
 
         },
         {
             lable:'Notes',
             path:'/notes',
-            icon:<FaNotesMedical/>
+            icon:<InlineIcon icon="solar:notes-minimalistic-line-duotone" height="25" width="25"/>
 
         },
     ],

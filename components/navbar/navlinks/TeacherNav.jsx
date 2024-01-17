@@ -1,22 +1,20 @@
-'use client'
 import React, { useState } from 'react'
 import NavLinks from './Links'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FaAngleDown, FaAngleUp, FaAnglesDown, FaArrowDown, FaArrowDown19, FaArrowTrendDown, FaCartArrowDown, FaCircleDown, FaNotesMedical, FaRightFromBracket, FaTurnDown, FaUpDown } from 'react-icons/fa6';
-import { motion } from 'framer-motion';
-function TeacherNav({ standard }) {
+import { InlineIcon } from '@iconify/react';
+function TeacherNav({standard}) {
     const navlinks = NavLinks.staff;
     const crtpath = usePathname()
-    const [addnotes, setaddNotes] = useState(false)
+    const [notes , setNotes] = useState(false)
     return (
-        <div className='flex flex-col gap-2'>
+        <>
             {
                 navlinks.map((item) => {
                     return <Link
                         href={item.path}
                         key={item.lable}
-                        className={`text-gray-800 w-[90%] py-3 px-4 flex items-center gap-2 text-xl rounded-r-full ${(crtpath == item.path) ? "shadow-[1px_1px_0px_0px] shadow-gray-500/[.5] bg-white" : ""} `}
+                        className={`text-gray-800 w-[90%] py-3 px-4 flex items-center gap-2 text-xl rounded-lg ${(crtpath == item.path) ? "bg-white" : ""} `}
                     >
                         {item.icon}
                         <p className='text-sm font-light'>
@@ -25,30 +23,26 @@ function TeacherNav({ standard }) {
                     </Link>
                 })
             }
-            <ul className={`${addnotes?'h-fit':'h-[30px]'} overflow-hidden `}>
-                <div className={`flex items-center w-[90%] ${addnotes?'bg-white rounded-tr-[20px]':''} justify-between text-xl px-4 text-gray-800 gap-2 py-2`}>
-                    <div className="flex gap-2">
-                        <FaNotesMedical />
-                        <h1 className='text-sm font-light'>Notes</h1>
+            <div onClick={()=>setNotes(!notes)} className={`w-[90%] cursor-pointer rounded-lg overflow-hidden transition-all ease duration-500 ${notes?'h-fit bg-white':'h-[49px] bg-transparent'}`}>
+                <div className="flex justify-between items-center">
+                    <div className="text-gray-800 py-3 px-4 flex items-center gap-2 text-xl">
+                        <InlineIcon icon="solar:notes-minimalistic-line-duotone" height="25" width="25" />
+                        <p className='text-sm font-light'>Notes</p>
                     </div>
-                    <div onClick={() => setaddNotes(!addnotes)} className="">
-                        {
-                            addnotes ? <FaAngleUp className='text-sm' /> : <FaAngleDown className='text-sm font-light' />
-                        }
+                    <div className="px-2">
+                        <InlineIcon icon="formkit:down" className='rotate-0' height="20" width="20" />
                     </div>
                 </div>
-                <div className={`flex flex-col  gap-4 w-[90%] transition-all ease duration-500 px-12 rounded-br-[20px] bg-white overflow-hidden justify-bottom`}>
+                <div className="flex flex-col gap-4 text-[12px] font-light px-10 py-4">
                     {
-                        standard.map((item) => {
-                            return (
-                                <Link className='font-light text-blue-400' href={item.path + 'grade'}>{item.lable}</Link>
-                            )
+                        standard.map((cls)=>{
+                            return <Link href={"/notes/"+cls.path+'grade'} className={(crtpath == `/notes/${cls.path}grade`)?"text-sky-600":"text-gray-800"}>{cls.lable}</Link>
                         })
                     }
                 </div>
-            </ul>
-            <button className='px-4 py-4 text-xl text-red-400 flex items-center justify-start gap-2'><FaRightFromBracket/><p className='text-sm'>Logout</p></button>
-        </div>
+            </div>
+            <button className='text-red-600 w-[90%] py-3 px-5 flex items-center gap-2 text-xl rounded-lg'><InlineIcon icon='solar:logout-2-outline' className='rotate-180' height="25" width="25" /><p className='text-sm font-light'>Logout</p></button>
+        </>
     )
 }
 
