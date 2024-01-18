@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link';
 
 const table = () => {
   const data = [
@@ -101,17 +100,18 @@ const table = () => {
                 headings.map((header)=>{
                   return (
                     header === 'id'?null:
-                    header === 'Details'?<td className='text-center'><Link href={value[header]}>{value[header]}</Link></td>:
+                    header === 'Details'?<td className='text-center' >{value[header]}</td>:
                     (
                       <td className='text-center'>{value[header]}</td>
                     )
                   )
                 })
-              }
+              } 
             </tr>
-          ))}
-        </tbody>
-      </table>
+          }
+          )}
+        
+        </table>
     </div>
   )
 }

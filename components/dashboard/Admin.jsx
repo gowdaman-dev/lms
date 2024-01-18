@@ -8,7 +8,7 @@ const Admin = () => {
   return (
     <>
       <Survey/>
-      <div className='flex h-fit w-full flex gap-4 md:justify-between justify-center md:flex-row flex-col '>
+      <div className='flex h-fit w-full gap-4 md:justify-between justify-center md:flex-row flex-col '>
         <section className='h-[300px] md:w-1/2 w-full flex flex-col justify-center  items-center bg-[#F2F5F9] rounded-lg'>
           <span className='text-gray-400 w-full text-left px-4'>Monthly Analysis</span>
           <AdminBar />

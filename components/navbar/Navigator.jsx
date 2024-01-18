@@ -46,9 +46,11 @@ function Navigator({ children, role }) {
                         width={45}
                         className='rounded-full border'
                     />
+                    <div className='md:visible hidden'>
                     <div className="flex flex-col text-[12px] text-gray-800">
                         <p>Gowdaman</p>
-                        <p className='text-[10px] text-sky-600 font-light'>Student</p>
+                        <p className='text-[10px]  text-sky-600 font-light'>Student</p>
+                    </div>
                     </div>
                 </div>
             </div>

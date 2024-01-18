@@ -5,7 +5,7 @@ function Footer({ theme }) {
         <>
             {
                 (theme == 'dark') && (
-                    <div className='w-full py-1 flex text-gray-200 justify-between px-8 bg-gray-600'>
+                    <div className=' w-full py-1 flex text-gray-200 justify-between px-8 bg-gray-600'>
                         <p className='text-[10px]'>
                             © EduLearn, All Right Reserved.
                         </p>
