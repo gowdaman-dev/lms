@@ -4,7 +4,7 @@ import { FaLock, FaUser } from 'react-icons/fa6'
 import Input from '@/components/Input'
 export default function Home () {
   return (
-    <div className=' flex h-[100vh] w-screen bg-[var(--authbg)]'>
+    <div className=' flex flex-row-reverse h-[100vh] w-screen bg-[var(--authbg)]'>
       <div className='flex sm:hidden w-full h-1/3 items-center justify-center bg-[var(--authgraydient)]'>
         <h1 className='text-center text-4xl text-blue-400 font-[calibari]'>
           EduLearn
