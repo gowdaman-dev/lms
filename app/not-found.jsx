@@ -20,7 +20,7 @@ function Notfound() {
         </div>
       </div>
       
-      <div className="homebg w-screen h-[25%]">
+      <div className="homebg w-screen h-fit">
         <div className="h-full py-10 w-full bg-sky-100/[.9] grid place-items-center">
           <div className="flex flex-col gap-5 item-center justify-center">
             <h1 className="md:text-6xl text-5xl font-black text-sky-400 tracking-widest text-center">
