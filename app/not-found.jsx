@@ -32,7 +32,7 @@ function Notfound() {
               Let's navigate back to the Dashboard and continue the journey of
               knowledge together
             </p>
-            <Link href={'Dashboard'} className=" mx-auto text-center px-2 py-1 border rounded-[40px] transition-color easeinout duration-500 hover:bg-sky-300 hover:text-white font-light border-sky-400 text-gray-600 w-fit">Dashboard</Link>
+            <Link href={'dashboard'} className=" mx-auto text-center px-2 py-1 border rounded-[40px] transition-color easeinout duration-500 hover:bg-sky-300 hover:text-white font-light border-sky-400 text-gray-600 w-fit">Dashboard</Link>
           </div>
         </div>
       </div>
